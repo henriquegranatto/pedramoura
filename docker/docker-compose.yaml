@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  app:
+    image: backend
+    restart: always
+    build: ../backend
+    working_dir: /app
+    command: bash start.sh
+    container_name: backend
+    ports:
+      - 3000:3000
